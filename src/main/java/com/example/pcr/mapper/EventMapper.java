@@ -10,9 +10,6 @@ import com.example.pcr.model.Event;
 public class EventMapper {
 	
 	public EventDTO toDto(Event event) {
-		if (event == null) {
-			return null;
-		}
 		
 		EventDTO eventDTO = new EventDTO();
 		eventDTO.setId(event.getId());

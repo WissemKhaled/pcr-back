@@ -23,11 +23,9 @@ public class Event {
 
     // Constructors
 
-    public Event(String nom, String lieu, String description) {
-        this.nom = nom;
-        this.lieu = lieu;
-        this.description = description;
-    }
+	public Event() {
+		
+	}
 
 	public Event(Long id, String nom, String description, String lieu, String imageUrl, byte[] image) {
 		this.id = id;
