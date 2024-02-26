@@ -26,7 +26,6 @@ public class EventController {
 		this.eventService = eventService;
 	}
 	
-	
 	@GetMapping
 	public ResponseEntity<List<EventDTO>> getAllEvents() {
 		List<EventDTO> events = eventService.getAllEvents().stream().map(event -> mapper.toDto(event)).toList();
