@@ -10,12 +10,22 @@ public class EventDTO {
 	
 	private String description;
 	
-	private EventDTO(Long id, String nom, String lieu, String description) {
+	private String imageUrl;
+	
+	private byte[] image;
+	
+	public EventDTO() {
+		
+	}
+	
+	public EventDTO(Long id, String nom, String lieu, String description, String imageUrl,byte[] image ) {
 		this.id = id;
 		this.nom = nom;
 		this.lieu = lieu;
 		this.description = description;
-	}
+		this.image = image;
+		this.imageUrl = imageUrl;
+		}
 	
 	public Long getId() {
 		return id;
@@ -49,5 +59,21 @@ public class EventDTO {
 		this.description = description;
 	}
 	
+
+	public String getImageUrl() {
+		return imageUrl;
+	}
+
+	public void setImageUrl(String imageUrl) {
+		this.imageUrl = imageUrl;
+	}
+
+	public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
 
 }

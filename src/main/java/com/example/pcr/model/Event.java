@@ -19,7 +19,7 @@ public class Event {
     @Lob
     private byte[] image;
 
-    private String imageUrl;
+	private String imageUrl;
 
     // Constructors
 
@@ -28,6 +28,15 @@ public class Event {
         this.lieu = lieu;
         this.description = description;
     }
+
+	public Event(Long id, String nom, String description, String lieu, String imageUrl, byte[] image) {
+		this.id = id;
+		this.nom = nom;
+		this.description = description;
+		this.lieu = lieu;
+		this.image = image;
+		this.imageUrl = imageUrl;
+	}
 
 	public Long getId() {
 		return id;
@@ -69,6 +78,14 @@ public class Event {
         this.imageUrl = imageUrl;
     }
     
+    public byte[] getImage() {
+		return image;
+	}
+
+	public void setImage(byte[] image) {
+		this.image = image;
+	}
+    
     @Override
     public String toString() {
         return "Event{" +
@@ -79,5 +96,6 @@ public class Event {
                 ", imageUrl='" + imageUrl + '\'' +
                 '}';
     }
+
 
 }
